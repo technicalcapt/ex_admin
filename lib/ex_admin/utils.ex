@@ -9,7 +9,7 @@ defmodule ExAdmin.Utils do
 
   if @module do
     @endpoint Module.concat([@module, "Endpoint"])
-    @router Module.concat([@module, "Router", "Helpers"])
+    @router Module.concat([@module, "Web", "Router", "Helpers"])
 
     @doc false
     def endpoint, do: @endpoint
@@ -25,7 +25,7 @@ defmodule ExAdmin.Utils do
     @doc false
     def endpoint, do: Module.concat([Application.get_env(:ex_admin, :module), "Endpoint"])
     @doc false
-    def router, do: Module.concat([Application.get_env(:ex_admin, :module), "Router", "Helpers"])
+    def router, do: Module.concat([Application.get_env(:ex_admin, :module), "Web", "Router", "Helpers"])
   end
 
   @doc false
